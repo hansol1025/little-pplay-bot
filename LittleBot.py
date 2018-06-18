@@ -18,9 +18,10 @@ async def on_message(message):
 	elif message.content.startswith('리틀아 양비카'):
 		if message.content.startswith('생각해'):
 			cc = random.choice(['양비카 님에 대해선.. 별생각 없어요 ㅎ..', '양비카가 누구였더라.. 물건인가? 사람이름은 아닌것 같은데..', '양비카님이 누군지도 몰라..', '양비카! 양비카! 양비카.. 나도 몰라..', '양비카라는 것에 대해선 좋게 생각하고 있어.. 아마도..', '비카? 비커인가..', '.. 양비카?'])
+			await client.send_message(message.channel, cc)
 		elif message.content.startswith('싫어'):
 			cc = "네"
-		await client.send_message(message.channel, cc)
+			await client.send_message(message.channel, cc)
 
 client.run(os.getenv('TOKEN'))
 
